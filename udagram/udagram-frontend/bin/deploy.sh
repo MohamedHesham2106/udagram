@@ -1,2 +1,3 @@
+eb setenv AWS_ACCESS_KEY_ID=AKIAWS5QR4K4X7LKM2SF AWS_BUCKET=raidenshuriken-udagram AWS_PROFILE=default AWS_SECRET_ACCESS_KEY=cHJkUe1pkZVcpb7JnE49QtnWIr/gsVsUd6Frqbu+ DB_PORT=5432 JWT_SECRET=your-secret-token PORT=3000 POSTGRES_DB=postgres POSTGRES_HOST=database-1.cw2fhwwzswea.us-east-1.rds.amazonaws.com POSTGRES_PASSWORD=raidenshuriken POSTGRES_USERNAME=postgres  RDS_DIALECT=postgres URL=http://raidenshuriken-udagram.s3-website-us-east-1.amazonaws.com
 aws s3 cp --recursive --acl public-read ./www s3://raidenshuriken-udagram/
 aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./www/index.html s3://raidenshuriken-udagram/
