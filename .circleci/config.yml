@@ -58,11 +58,12 @@ jobs:
       - run:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
-          command: |
+          command:
+            echo "Deploying backend"
+            npm run api:deploy |
             echo "Deploying frontend"
             npm run frontend:deploy
-            echo "Deploying backend"
-            npm run api:deploy
+            
 
 workflows:
   udagram:
