@@ -12,10 +12,10 @@
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb init udagram-api --region us-east-1 && eb list && eb use udagram-api-dev && npm run environment &&  eb deploy",
+    "deploy": "npm run build && eb init udagram-api --region us-east-1 && eb list && eb use udagram-api-dev &&  eb deploy",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "environment":"eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID && eb setenv AWS_BUCKET=$AWS_BUCKET && eb setenv AWS_PROFILE=default && eb setenv AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY && eb setenv DB_PORT=$DB_PORT && eb setenv JWT_SECRET=$JWT_SECRET && eb setenv PORT=$PORT && eb setenv POSTGRES_DB=$POSTGRES_D && eb setenv POSTGRES_HOST=$POSTGRES_HOS && eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWOR && eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME   && eb setenv RDS_DIALECT=$RDS_DIALECT  && eb setenv URL=$URL"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
