@@ -71,3 +71,13 @@ in `.circleci` folder `config.yml`:
 ### Pipeline (CircleCI) Workflow
 1. Finish all build jobs in config.yml
 2. Start deploying frontend to S3 and backend to Elastic Beanstalk
+
+## Architecture Diagrams
+
+### AWS
+![image](https://user-images.githubusercontent.com/102517583/188355991-05a90cb8-623f-449a-9bb0-267c7f69cbb0.png)
+
+### CircleCI
+![image](https://user-images.githubusercontent.com/102517583/188356054-bd8fb4bb-53df-4f3e-b1ea-fc804945d3e4.png)
+
+
