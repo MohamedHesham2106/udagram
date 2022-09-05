@@ -15,7 +15,7 @@
     "deploy": "npm run build && eb init udagram-api --region us-east-1 && eb list && eb use udagram-api-dev && npm run environment &&  eb deploy",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "environment":"eb setenv AWS_ACCESS_KEY_ID=AKIAWS5QR4K4X7LKM2SF AWS_BUCKET=raidenshuriken-udagram AWS_PROFILE=default AWS_SECRET_ACCESS_KEY=cHJkUe1pkZVcpb7JnE49QtnWIr/gsVsUd6Frqbu+ DB_PORT=5432 JWT_SECRET=your-secret-token PORT=3000 POSTGRES_DB=postgres POSTGRES_HOST=database-1.cw2fhwwzswea.us-east-1.rds.amazonaws.com POSTGRES_PASSWORD=raidenshuriken POSTGRES_USERNAME=postgres  RDS_DIALECT=postgres URL=http://raidenshuriken-udagram.s3-website-us-east-1.amazonaws.com"
+    "environment":"eb setenv AWS_ACCESS_KEY_ID=AKIAWS5QR4K4X7LKM2SF && eb setenv AWS_BUCKET=raidenshuriken-udagram && eb setenv AWS_PROFILE=default && eb setenv AWS_SECRET_ACCESS_KEY=cHJkUe1pkZVcpb7JnE49QtnWIr/gsVsUd6Frqbu+ && eb setenv DB_PORT=5432 JWT_SECRET=your-secret-token && eb setenv PORT=3000 && eb setenv POSTGRES_DB=postgres && eb setenv POSTGRES_HOST=database-1.cw2fhwwzswea.us-east-1.rds.amazonaws.com && eb setenv POSTGRES_PASSWORD=raidenshuriken && eb setenv POSTGRES_USERNAME=postgres  && eb setenv RDS_DIALECT=postgres && eb setenv URL=http://raidenshuriken-udagram.s3-website-us-east-1.amazonaws.com"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
